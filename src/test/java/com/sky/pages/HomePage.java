@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.FindBys;
+import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
 public class HomePage {
@@ -13,7 +14,7 @@ public class HomePage {
 
     @FindBys({
         @FindBy(className = "modal-content"),
-        @FindBy(className = "sky_icon sky_icon-close icon_xs")
+        @FindBy(className = "close")
     })
     private WebElement welcomeScreenCloseBtn;
 

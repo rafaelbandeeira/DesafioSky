@@ -9,18 +9,18 @@ import org.openqa.selenium.support.PageFactory;
 public class Dashboard {
     private WebDriver driver;
     @FindBys({
-        @FindBy(className = "nav-main-container"),
+        @FindBy(xpath = "//*[@id=\"main-menu\"]/div[2]"),
         @FindBy(linkText = "Programação")
     })
-    private WebElement programacao;
+    private WebElement programacaoBtn;
 
     public Dashboard(WebDriver driver){
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
 
-    public void accessMenu(){
-        programacao.click();
+    public void accessMenuProgramacao(){
+        programacaoBtn.click();
     }
 
 }
