@@ -9,7 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 public class HomePage {
     private WebDriver driver;
 
-    private static String URL = "https://www.sky.com.br";
+    public static String HomePageURL = "https://www.sky.com.br";
 
     @FindBys({
         @FindBy(className = "modal-content"),
@@ -19,7 +19,7 @@ public class HomePage {
 
     public HomePage(WebDriver driver){
         this.driver = driver;
-        driver.get(URL);
+        driver.get(HomePageURL);
         PageFactory.initElements(driver, this);
     }
 
