@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class SeeCurrentlyAiringTest {
+public class CheckCurrentlyAiringProgrammeTest {
     WebDriver driver;
 
     @BeforeEach
@@ -30,7 +30,7 @@ public class SeeCurrentlyAiringTest {
     }
 
     @Test
-    public void OpenCurrentlyAiringShow() throws InterruptedException {
+    public void VerifyCurrentShowTitleAndDuration() {
         HomePage home = new HomePage(driver);
         home.closeWelcomeScreen();
 
