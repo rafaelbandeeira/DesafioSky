@@ -40,7 +40,6 @@ public class CheckCurrentlyAiringProgrammeTest {
         dashboard.accessMenuProgramacao();
 
         ProgramacaoPage programacaoPage = new ProgramacaoPage(driver);
-
         programacaoPage.scrollToProgramacaoList();
 
         ProgramacaoListPage programacaoList = new ProgramacaoListPage(driver);
