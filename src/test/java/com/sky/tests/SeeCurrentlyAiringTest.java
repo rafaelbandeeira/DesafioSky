@@ -1,13 +1,10 @@
 package com.sky.tests;
 
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.sky.pages.Dashboard;
 import com.sky.pages.HomePage;
 import com.sky.pages.ProgramacaoListPage;
 import com.sky.pages.ProgramacaoPage;
 import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
@@ -19,14 +16,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class SeeCurrentlyAiringTest {
     WebDriver driver;
-    static ExtentReports extent;
-    static ExtentSparkReporter spark;
-
-    @BeforeAll
-    public static void beforeAll(){
-        extent = new ExtentReports();
-        spark = new ExtentSparkReporter("/Users/rafaelds/Documents/projects/DesafioSky/report/Spark.html");
-    }
 
     @BeforeEach
     public void setup(){
@@ -38,7 +27,6 @@ public class SeeCurrentlyAiringTest {
     @AfterEach
     public void teardown(){
         driver.close();
-        extent.attachReporter(spark);
     }
 
     @Test
