@@ -21,8 +21,8 @@ You can run the suite using either one of two methods: \
 ### Functional tests
 The test was created based on the requirement provided by the challenge. After a session-based exploratory test was performed, I decided not to create any other functional tests. As the web application is in production, so the risk of messing with a real business was greater than the benefits of exploring it a bit more. 
 ### Non-functional tests
-* Performance: no performance tests that accessed service resources were executed for the reasons mentioned in the previous section.
-  * Front-end performance: using Google PageSpeed Insights, I analysed the performance of the front-end scripting, which yielded the results: 
+* **Performance**: no performance tests that accessed service resources were executed for the reasons mentioned in the previous section.
+  * **Front-end performance**: using Google PageSpeed Insights, I analysed the performance of the front-end scripting, which yielded the results: 
     * For desktop, the website received a medium performance with a rating of 52/100.\
   ![Desktop report1](/report/pageInsights/skydesktop1.png)\
   ![Desktop report1](/report/pageInsights/skydesktop2.png)\
@@ -31,7 +31,7 @@ The test was created based on the requirement provided by the challenge. After a
   ![Mobile report1](report/pageInsights/skymobile1.png)\
   ![Mobile report1](report/pageInsights/skymobile2.png)\
   ![Mobile report1](report/pageInsights/skymobile3.png)
-  * Accessibility: using Axe Accessibility to assess the website, a total of 46 issues were found in the Home. As for the Programação page, the numbers is far greater, with 268 issues found.\
+  * **Accessibility**: using Axe Accessibility to assess the website, a total of 46 issues were found in the Home. As for the Programação page, the numbers is far greater, with 268 issues found.\
   ![A11y Home](report/a11yReport/skyHomepageA11y.png)\
   ![A11y Programacao](report/a11yReport/skyProgramacaoA11y.png)
 
