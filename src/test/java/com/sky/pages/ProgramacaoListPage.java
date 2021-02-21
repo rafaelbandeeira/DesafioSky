@@ -1,5 +1,6 @@
 package com.sky.pages;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -51,7 +52,7 @@ public class ProgramacaoListPage {
     }
 
     public void openCurrentShowNaTela() {
-        airingNow.click();
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click()", airingNow);
     }
 
 }

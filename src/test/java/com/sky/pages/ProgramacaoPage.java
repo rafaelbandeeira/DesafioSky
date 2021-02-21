@@ -21,6 +21,6 @@ public class ProgramacaoPage {
 
     public void scrollToProgramacaoList(){
         ((JavascriptExecutor) driver).executeScript("arguments[0]." +
-                "scrollIntoView(true);", programacaoList);
+                "scrollIntoView(true)", programacaoList);
     }
 }
