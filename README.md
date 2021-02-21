@@ -13,13 +13,17 @@ This little test suite consists of a single test developed with Java, using Sele
 ├── DesafioSky.iml
 ├── README.md
 ├── chromedriver
+├── functionTestReport.png
 ├── pom.xml
-├── report (the non-functional reports are here)
+├── report
 │   ├── a11yReport
 │   │   ├── sky-homepage-https-www.sky.com.br--2021-02-21.json
 │   │   ├── sky-programacao-https-www.sky.com.br-programa-2021-02-21.json
 │   │   ├── skyHomepageA11y.png
 │   │   └── skyProgramacaoA11y.png
+│   ├── issues
+│   │   ├── nowAiringDisappearsAfter23h.png
+│   │   └── thumbnailsAreBroken.png
 │   └── pageInsights
 │       ├── skydesktop1.png
 │       ├── skydesktop2.png
@@ -35,12 +39,12 @@ This little test suite consists of a single test developed with Java, using Sele
 │       ├── java
 │       │   └── com
 │       │       └── sky
-│       │           ├── pages (page object files are here)
+│       │           ├── pages
 │       │           │   ├── Dashboard.java
 │       │           │   ├── HomePage.java
 │       │           │   ├── ProgramacaoListPage.java
 │       │           │   └── ProgramacaoPage.java
-│       │           └── tests (test scripts are here)
+│       │           └── tests
 │       │               └── CheckCurrentlyAiringProgrammeTest.java
 │       └── resources
 │           └── allure.properties
@@ -78,7 +82,6 @@ This little test suite consists of a single test developed with Java, using Sele
                 │   └── ProgramacaoPage.class
                 └── tests
                     └── CheckCurrentlyAiringProgrammeTest.class
-
 ```
 
 ### Running tests
@@ -92,7 +95,8 @@ You can run the suite using either one of two methods: \
 
 ## Test plan
 ### Functional tests
-The test was created based on the requirement provided by the challenge. After a session-based exploratory test was performed, I decided not to create any other functional tests. As the web application is in production, so the risk of messing with a real business was greater than the benefits of exploring it a bit more. 
+The test was created based on the requirement provided by the challenge. After a session-based exploratory test was performed, I decided not to create any other functional tests. As the web application is in production, so the risk of messing with a real business was greater than the benefits of exploring it a bit more. Below, there's an overview report on the test cycle right before submitting the code to the repository.\
+![Functional tests report](functionTestReport.png) 
 ### Non-functional tests
 * **Performance**: no performance tests that accessed service resources were executed for the reasons mentioned in the previous section.
   * **Front-end performance**: using Google PageSpeed Insights, I analysed the performance of the front-end scripting, which yielded the results: 
@@ -109,3 +113,22 @@ The test was created based on the requirement provided by the challenge. After a
   ![A11y Programacao](report/a11yReport/skyProgramacaoA11y.png)
 
 You can find these reports in the `report` folder inside the root of the project. Both Axe and PageSpeed Insights offer suggestions on how to solve/improve the website.
+
+### Issues
+During exploratory tests, I found two issues that I'd like to point out.
+* When accessing the Programação page, the thumbnails for the channels are broken
+```
+Steps to reproduce:
+1. Open www.sky.com.br
+2. Click on "Programação"
+3. Scroll to the list of channels and programme schedule
+```
+![Bug1](report/issues/thumbnailsAreBroken.png)\
+* When opening the programme schedule after 11 PM, the "now airing" pointer disappears, and the "current time" is not displayed, forcing users to figure out how the slider works.
+```
+Steps to reproduce:
+1. After 11 PM, open www.sky.com.br
+2. Click on "Programação"
+3. Scroll to the list of channels and programme schedule
+```
+![Bug2](report/issues/nowAiringDisappearsAfter23h.png)
