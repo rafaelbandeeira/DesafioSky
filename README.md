@@ -1,4 +1,4 @@
-# Introduction
+# Sky Technical Challenge
 ## Presentation
 This little test suite consists of a single test developed with Java, using Selenium Framework and the JUnit test engine. To better organise the code, the suite was created following the Page Objects Model, also generating a report with Allure.
 
