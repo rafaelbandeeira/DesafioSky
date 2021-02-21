@@ -8,6 +8,79 @@ This little test suite consists of a single test developed with Java, using Sele
 2. On the root of this project, you'll find the Chromedriver v 88 for MacOS x64. Replace it with the correct version for your OS and browser.
 3. Close the repository into your desired folder and wait until your IDE indexes all files. I recommend using IntelliJ IDEA.
 
+### Project structure
+```
+├── DesafioSky.iml
+├── README.md
+├── chromedriver
+├── pom.xml
+├── report (the non-functional reports are here)
+│   ├── a11yReport
+│   │   ├── sky-homepage-https-www.sky.com.br--2021-02-21.json
+│   │   ├── sky-programacao-https-www.sky.com.br-programa-2021-02-21.json
+│   │   ├── skyHomepageA11y.png
+│   │   └── skyProgramacaoA11y.png
+│   └── pageInsights
+│       ├── skydesktop1.png
+│       ├── skydesktop2.png
+│       ├── skydesktop3.png
+│       ├── skymobile1.png
+│       ├── skymobile2.png
+│       └── skymobile3.png
+├── src
+│   ├── main
+│   │   ├── java
+│   │   └── resources
+│   └── test
+│       ├── java
+│       │   └── com
+│       │       └── sky
+│       │           ├── pages (page object files are here)
+│       │           │   ├── Dashboard.java
+│       │           │   ├── HomePage.java
+│       │           │   ├── ProgramacaoListPage.java
+│       │           │   └── ProgramacaoPage.java
+│       │           └── tests (test scripts are here)
+│       │               └── CheckCurrentlyAiringProgrammeTest.java
+│       └── resources
+│           └── allure.properties
+└── target
+    ├── allure-results
+    │   ├── allure.properties
+    │   ├── dd50e036-81c4-401a-85ee-5bf279979a00-result.json
+    │   ├── dfe530f3-1a33-4a5a-ae35-c8d8ef94900c-container.json
+    │   ├── executor.json
+    │   └── f726b681-c075-4297-98d1-1ff2a9843bdb-container.json
+    ├── classes
+    ├── generated-test-sources
+    │   └── test-annotations
+    ├── maven-status
+    │   └── maven-compiler-plugin
+    │       ├── compile
+    │       │   └── default-compile
+    │       │       └── inputFiles.lst
+    │       └── testCompile
+    │           └── default-testCompile
+    │               ├── createdFiles.lst
+    │               └── inputFiles.lst
+    ├── site
+    ├── surefire-reports
+    │   ├── TEST-com.sky.tests.CheckCurrentlyAiringProgrammeTest.xml
+    │   └── com.sky.tests.CheckCurrentlyAiringProgrammeTest.txt
+    └── test-classes
+        ├── allure.properties
+        └── com
+            └── sky
+                ├── pages
+                │   ├── Dashboard.class
+                │   ├── HomePage.class
+                │   ├── ProgramacaoListPage.class
+                │   └── ProgramacaoPage.class
+                └── tests
+                    └── CheckCurrentlyAiringProgrammeTest.class
+
+```
+
 ### Running tests
 You can run the suite using either one of two methods: \
 * Without generating a report:
