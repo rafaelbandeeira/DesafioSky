@@ -4,6 +4,7 @@ import com.sky.pages.Dashboard;
 import com.sky.pages.HomePage;
 import com.sky.pages.ProgramacaoListPage;
 import com.sky.pages.ProgramacaoPage;
+import io.qameta.allure.Description;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -30,6 +31,7 @@ public class CheckCurrentlyAiringProgrammeTest {
     }
 
     @Test
+    @Description("Accesses the information of the current show and compares the title")
     public void VerifyCurrentShowTitleAndDuration() {
         HomePage home = new HomePage(driver);
         home.closeWelcomeScreen();

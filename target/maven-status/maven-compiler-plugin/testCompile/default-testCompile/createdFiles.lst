@@ -1,0 +1,5 @@
+com/sky/tests/CheckCurrentlyAiringProgrammeTest.class
+com/sky/pages/Dashboard.class
+com/sky/pages/ProgramacaoPage.class
+com/sky/pages/ProgramacaoListPage.class
+com/sky/pages/HomePage.class
