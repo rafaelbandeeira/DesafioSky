@@ -15,7 +15,7 @@ This little test suite consists of a single test developed with Java, using Sele
 ├── chromedriver
 ├── functionTestReport.png
 ├── pom.xml
-├── report
+├── report (test report are here)
 │   ├── a11yReport
 │   │   ├── sky-homepage-https-www.sky.com.br--2021-02-21.json
 │   │   ├── sky-programacao-https-www.sky.com.br-programa-2021-02-21.json
@@ -39,12 +39,12 @@ This little test suite consists of a single test developed with Java, using Sele
 │       ├── java
 │       │   └── com
 │       │       └── sky
-│       │           ├── pages
+│       │           ├── pages (page objects are here)
 │       │           │   ├── Dashboard.java
 │       │           │   ├── HomePage.java
 │       │           │   ├── ProgramacaoListPage.java
 │       │           │   └── ProgramacaoPage.java
-│       │           └── tests
+│       │           └── tests (test scripts here)
 │       │               └── CheckCurrentlyAiringProgrammeTest.java
 │       └── resources
 │           └── allure.properties
