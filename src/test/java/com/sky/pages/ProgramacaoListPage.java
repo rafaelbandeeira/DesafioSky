@@ -26,7 +26,6 @@ public class ProgramacaoListPage {
         @FindBy(className = "schedule-live"),
         @FindBy(className = "program-schedule-title")
     })
-//    @FindBy(how = How.CLASS_NAME, using = "schedule-live")
     private WebElement displayedProgrammeTitle;
     @FindBys({
             @FindBy(className = "schedule-live"),
