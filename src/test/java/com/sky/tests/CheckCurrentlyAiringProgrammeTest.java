@@ -16,33 +16,33 @@ import java.util.concurrent.TimeUnit;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CheckCurrentlyAiringProgrammeTest {
-    WebDriver driver;
+    WebDriver chrome;
 
     @BeforeEach
     public void setup(){
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        chrome = new ChromeDriver();
+        chrome.manage().window().maximize();
+        chrome.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     }
 
     @AfterEach
     public void teardown(){
-        driver.close();
+        chrome.close();
     }
 
     @Test
     @Description("Accesses the information of the current show and compares the title")
     public void VerifyCurrentShowTitleAndDuration() {
-        HomePage home = new HomePage(driver);
+        HomePage home = new HomePage(chrome);
         home.closeWelcomeScreen();
 
-        Dashboard dashboard = new Dashboard(driver);
+        Dashboard dashboard = new Dashboard(chrome);
         dashboard.accessMenuProgramacao();
 
-        ProgramacaoPage programacaoPage = new ProgramacaoPage(driver);
+        ProgramacaoPage programacaoPage = new ProgramacaoPage(chrome);
         programacaoPage.scrollToProgramacaoList();
 
-        ProgramacaoListPage programacaoList = new ProgramacaoListPage(driver);
+        ProgramacaoListPage programacaoList = new ProgramacaoListPage(chrome);
         programacaoList.getDisplayedInformation();
         programacaoList.openCurrentShowNaTela();
         programacaoList.getInformationDetailScreen();
