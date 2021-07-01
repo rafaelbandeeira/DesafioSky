@@ -14,6 +14,7 @@
     </properties>
 
     <dependencies>
+<<<<<<< HEAD
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
@@ -64,12 +65,24 @@
             <type>maven-plugin</type>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
+=======
+        <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
         <dependency>
-            <groupId>org.aspectj</groupId>
-            <artifactId>aspectjweaver</artifactId>
-            <version>1.9.6</version>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.8.0-M1</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+>>>>>>> 5f1670e7310b4249f552df80c9b8c9b650703233
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>4.0.0-beta-4</version>
         </dependency>
     </dependencies>
+<<<<<<< HEAD
     <build>
         <plugins>
             <plugin>
@@ -110,4 +123,6 @@
             </plugin>
         </plugins>
     </build>
+=======
+>>>>>>> 5f1670e7310b4249f552df80c9b8c9b650703233
 </project>
