@@ -6,24 +6,19 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
 
-public class HomePage {
-    private WebDriver driver;
-
-    public static String HomePageURL = "https://www.sky.com.br";
-
+public class HomePage extends Dashboard {
     @FindBys({
         @FindBy(className = "modal-content"),
         @FindBy(className = "close")
     })
-    private WebElement welcomeScreenCloseBtn;
+    private WebElement botaoFecharJanelaBemVindo;
 
-    public HomePage(WebDriver driver){
-        this.driver = driver;
-        driver.get(HomePageURL);
-        PageFactory.initElements(driver, this);
+    public HomePage(WebDriver browser){
+        super(browser);
     }
 
-    public void closeWelcomeScreen(){
-        welcomeScreenCloseBtn.click();
+    public HomePage fecharJanelaBemVindo(){
+        botaoFecharJanelaBemVindo.click();
+        return this;
     }
 }

@@ -69,8 +69,8 @@ This little test suite consists of a single test developed with Java, using Sele
     │               └── inputFiles.lst
     ├── site
     ├── surefire-reports
-    │   ├── TEST-com.sky.tests.CheckCurrentlyAiringProgrammeTest.xml
-    │   └── com.sky.tests.CheckCurrentlyAiringProgrammeTest.txt
+    │   ├── TEST-com.sky.tests.VerificarProgramaAtualTest.xml
+    │   └── com.sky.tests.VerificarProgramaAtualTest.txt
     └── test-classes
         ├── allure.properties
         └── com

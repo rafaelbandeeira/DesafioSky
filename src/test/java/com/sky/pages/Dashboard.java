@@ -7,20 +7,21 @@ import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
 
 public class Dashboard {
-    private WebDriver driver;
+    protected WebDriver browser;
+
     @FindBys({
         @FindBy(xpath = "//*[@id=\"main-menu\"]/div[2]"),
         @FindBy(linkText = "Programação")
     })
     private WebElement programacaoBtn;
 
-    public Dashboard(WebDriver driver){
-        this.driver = driver;
-        PageFactory.initElements(driver, this);
+    public Dashboard(WebDriver browser){
+        this.browser = browser;
+        PageFactory.initElements(browser, this);
     }
 
-    public void accessMenuProgramacao(){
+    public ProgramacaoPage abrirMenuProgramacao(){
         programacaoBtn.click();
+        return new ProgramacaoPage(browser);
     }
-
 }
