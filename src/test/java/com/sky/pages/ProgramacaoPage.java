@@ -8,8 +8,6 @@ import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
 
 public class ProgramacaoPage extends Dashboard {
-//    private WebDriver browser;
-
     @FindBys({
             @FindBy(className = "schedule-live"),
             @FindBy(className = "program-schedule-title")
