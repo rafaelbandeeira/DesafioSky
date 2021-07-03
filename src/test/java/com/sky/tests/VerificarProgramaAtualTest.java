@@ -3,6 +3,7 @@ package com.sky.tests;
 import com.sky.pages.HomePage;
 import com.sky.pages.DetalhesProgramaPage;
 import com.sky.pages.ProgramacaoPage;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import io.qameta.allure.Description;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -11,6 +12,7 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.json.JsonOutput;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.time.Duration;
 
@@ -21,7 +23,7 @@ public class VerificarProgramaAtualTest {
 
     @BeforeEach
     public void setup(){
-        System.setProperty("webdriver.chrome.driver", "/Users/rafaelds/drivers/chromedriver91/chromedriver");
+        WebDriverManager.chromedriver().setup();
         browser = new ChromeDriver();
         browser.manage().window().maximize();
         browser.get("https://www.sky.com.br");
